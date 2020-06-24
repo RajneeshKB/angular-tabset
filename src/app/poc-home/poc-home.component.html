@@ -1,0 +1,45 @@
+<div class="h-100">
+  <app-poc-header></app-poc-header>
+  <div class="poc-content pt-4 px-3">
+    <!-- <nav ngbNav #nav="ngbNav" class="nav-tabs">
+      <ng-container ngbNavItem>
+        <a ngbNavLink>One</a>
+        <ng-template>
+          <p>First tab</p>
+        </ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Two</a>
+        <ng-template><p>Second tab</p></ng-template>
+      </ng-container>
+      <ng-container ngbNavItem>
+        <a ngbNavLink>Third</a>
+        <ng-template><p>Third tab</p></ng-template>
+      </ng-container>
+    </nav> -->
+    <ngb-tabset [destroyOnHide]="false" [(activeId)]="activeTab" (tabChange)="tabChangeHandler($event)">
+      <ngb-tab id="validation" title="User Validation">
+        <!-- <ng-template ngbTabTitle><a [routerLink]="[{ outlets: { valid: ['user-validation'] } }]">User Validation</a></ng-template> -->
+        <ng-template ngbTabContent>
+          <!-- <router-outlet name="valid"></router-outlet> -->
+          <app-user-validation></app-user-validation>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab id="addition" title="User Addition">
+        <!-- <ng-template ngbTabTitle><a routerLink="/user-addition">User Addition</a></ng-template> -->
+        <ng-template ngbTabContent>
+          <!-- <router-outlet name="add"></router-outlet> -->
+          <app-user-addition></app-user-addition>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab id="view" title="User View">
+        <!-- <ng-template ngbTabTitle><div>User View</div></ng-template> -->
+        <ng-template ngbTabContent>
+          <app-user-view></app-user-view>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+    
+  </div>
+  <app-poc-footer></app-poc-footer>
+</div>

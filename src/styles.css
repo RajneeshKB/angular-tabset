@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+
+:disabled{
+    cursor: not-allowed;
+}
+
+.poc-content .nav .nav-link{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--black);
+    border: none;
+    padding: 0.75rem 2rem;
+}
+
+.poc-content .nav .nav-link.active{
+    color: var(--primary);
+    border-top: 3px solid #FDAB4C;
+    border-radius: 0px;
+    font-weight: 600;
+}
+
+.poc-content .tab-content{
+    height: 89%;
+}
+.poc-content .tab-content .tab-pane{
+    height: 100%;
+}
